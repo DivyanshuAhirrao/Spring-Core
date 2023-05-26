@@ -1,0 +1,20 @@
+                                                                            || Date : 25/05/23 ||
+
+                                                                    // Topic : Spring - Scope of Beans. 
+
+
+Q1)What are Bean Scope ?
+ > There Are Six Bean Scope :
+ 1) Singleton
+ 2) Prototype
+ 3) Session
+ 4) Request
+ 5) WebSocket
+ 6) Servlet Context
+
+1) Singleton : a) When we define a bean way singleton Scope, Container creates single instance of that bean.
+               b) All request for that bean will return same Object.
+               c) Any modification to the Object will be reflected in all the reference of the bean.
+               d) This Scope is the Default scope if no other Scope is specified. 
+
+2)Prototype :  a) A bean with a Prototype Scope will return different Instance(Object) every time requested from the Container.

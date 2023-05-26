@@ -1,0 +1,30 @@
+
+
+const firstUser {
+     name : 'Div',
+     online : true,
+     account : 'normal'
+};
+const secondUser {
+     name : 'Adams',
+     online : true,
+     account : 'normal'
+};
+const thirdUser {
+     name : 'Neel',
+     online : true,
+     account : 'normal'
+};
+
+const sendMsgToUser = (user) => {
+     if(user.online) {
+          if(user.account === 'normal') {
+              console.log('Hey hi, '+user.name);  
+          }
+          else {
+              console.log('Hey hi, '+user.name);  
+          }
+}
+sendMsgToUser(firstUser);
+sendMsgToUser(secondUser);
+sendMsgToUser(thirdUser);

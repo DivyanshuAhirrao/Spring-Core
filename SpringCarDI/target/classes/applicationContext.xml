@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+                    <!-- Fuel Configuration-->
+    <bean id="fuel1" class="dependencyentity.Petrol"></bean>
+    <bean id="fuel2" class="dependencyentity.Diesel"></bean>
+
+                    <!--  Car Configuration-->
+    <bean id="car1" class="mainentity.Nexon">
+        <constructor-arg ref="fuel1" />
+    </bean>
+
+    <bean id="car2" class="mainentity.Fortuner">
+        <constructor-arg ref="fuel2" />
+    </bean>
+
+                      <!-- Products Configuration-->
+    <bean id="prod1" class="shopdependency.dependencyentity.GroceryItems"></bean>
+    <bean id="prod2" class="shopdependency.dependencyentity.HardwareItems"></bean>
+    <bean id = "emp1" class="shopdependency.dependencyentity.SalesMan"></bean>
+    <bean id = "emp2" class="shopdependency.dependencyentity.Watchman"></bean>
+
+           <!-- Products Configuration-->
+    <bean id="shop1" class="shopdependency.mainentity.GroceryShop">
+         <property name="p" ref="prod1" />
+         <property name="e" ref="emp1" />
+    </bean>
+
+    <bean id="shop2" class="shopdependency.mainentity.HardwareShops">
+        <property name="p" ref="prod2" />
+        <property name="e" ref="emp1" />
+    </bean>
+
+
+</beans>

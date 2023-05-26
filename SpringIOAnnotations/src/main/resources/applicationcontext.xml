@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <context:component-scan base-package="cards" />
+<context:component-scan base-package="diWithAnnotations" />
+   <context:component-scan base-package="company" />
+   <context:component-scan base-package="buildings" />
+   <context:component-scan base-package="employee" />
+
+    <context:component-scan base-package="scopeOfBean" />
+    <context:annotation-config />
+
+   <bean class="beanLifecycle.BurgerWithAnnotations">
+              <property name="price" value="149" > </property>
+   </bean>
+
+    <bean class= "scopeOfBean.Demo" scope="prototype">
+         <property name="price" value="999" />
+    </bean>
+
+</beans>
